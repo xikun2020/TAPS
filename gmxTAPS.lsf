@@ -1,0 +1,28 @@
+#!/bin/bash
+
+#BSUB -J MetEnHePaCSp00TAPS
+#BSUB -n 12
+#BSUB -o %J.stdout
+#BSUB -e %J.stderr
+#BSUB -R "span[ptile=32]"
+#BSUB -W 2400:00
+#BSUB -q q2080
+#BSUB -gpu num=3
+#BSUB -m gpu19
+
+module load gromacs/2019.4-gpu cuda/10.2 gcc/8.3.0 openmpi/4.0.2-gcc-8.3.0 plumed/gcc-8.3.0 python/anaconda3/2019.10 
+
+#plumednompi
+export PATH=$PATH:/home/grp-zhulz/apps/plumed/2.7/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/grp-zhulz/apps/plumed/2.7/lib
+
+export PYTHONPATH=$PYTHONPATH:/home/grp-zhulz/apps/lib/python3.7/site-packages
+
+export PATH=$PATH:/home/grp-zhulz/apps/bin
+
+mpirun -np 3 --mca opal_common_ucx_opal_mem_hooks 1 python runTAPS.py | tee -a Record.log
+
+
+
+
+

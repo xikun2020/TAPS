@@ -1,0 +1,22 @@
+#!/bin/bash
+#BSUB -J TAPSMetEnp00PCVz
+#BSUB -n 4
+#BSUB -R "span[ptile=4]"
+#BSUB -o %J.stdout
+#BSUB -e %J.stderr
+#BSUB -W 2400:00
+#BSUB -q q2080
+#BSUB -gpu num=1
+
+module load cuda/10.2 gcc/8.3.0 openmpi/4.0.2-gcc-8.3.0 plumed/gcc-8.3.0 gromacs/2019.4-gpu python/anaconda3/2019.10
+
+#plumednompi
+export PATH=/home/grp-zhulz/apps/plumed/2.7/bin:$PATH
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/grp-zhulz/apps/plumed/2.7/lib
+
+export PYTHONPATH=$PYTHONPATH:/home/grp-zhulz/apps/lib/python3.7/site-packages
+
+export PATH=$PATH:/home/grp-zhulz/apps/bin
+
+python taps_conv.py
+
