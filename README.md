@@ -31,20 +31,21 @@ Travelling-salesman based Automatic Path-Searching (TAPS)
   * Perpendicular relaxation: Quickly find MFEP segments
   * Automatic re-order of path nodes by Travelling-salesman
   * Enhanced sampling along path on PCV-z by MetaD
-  * Validated for three protein systems (76-303 residues and total 30000-80000 atoms, [TAPS](https://pubs.acs.org/journal/jctcce))
-
+  * Validated for three protein systems (76-303 residues and total 30000-80000 atoms, [TAPS](https://pubs.acs.org/journal/jctcce))      
+            
 Tutorial
 ==
   1. The parameters used for TAPS can be modified in pars/taps.par file
   2. Serial Running:
-
-    `1. Change runMode to "serial" in taps.par        
+```
+     1. Change runMode to "serial" in taps.par
      2. > python runTAPS.py                                  
-
+```
   3. Parallel Running:
-
-    `1. Change runMode to "Parallel" in taps.par
+```
+     1. Change runMode to "Parallel" in taps.par
      2. > mpirun -np 8 python runTAPS.py          
+```
 
 TODO
 =
