@@ -57,9 +57,9 @@ TODO
 Authors:
 =
 
-Lizhe Zhu: zhulizhe@cuhk.edu.cn
+Lizhe Zhu: *zhulizhe@cuhk.edu.cn*
 
-Kun Xi: xikun@cuhk.edu.cn
+Kun Xi: *xikun@cuhk.edu.cn*
 
 Contributors:
 =
