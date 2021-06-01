@@ -26,7 +26,7 @@ We highly recommend that you download the Python 3.x version of Anaconda, which 
 Design and Usage
 ==
 Travelling-salesman based Automatic Path-Searching (TAPS)
-=
+===
   * No static coordinate space (CVs): ordered high dimensional conformations
   * Perpendicular relaxation: Quickly find MFEP segments
   * Automatic re-order of path nodes by Travelling-salesman
