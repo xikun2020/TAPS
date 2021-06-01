@@ -31,7 +31,7 @@ Travelling-salesman based Automatic Path-Searching (TAPS)
   * Perpendicular relaxation: Quickly find MFEP segments
   * Automatic re-order of path nodes by Travelling-salesman
   * Enhanced sampling along path on PCV-z by MetaD
-  * Validated for three protein systems (76-303 residues and total 30000-80000 atoms, [TAPS](https://pubs.acs.org/journal/jctcce))      
+  * Validated for three protein systems (76-303 residues and total 30000-80000 atoms, [TAPStest](https://pubs.acs.org/journal/jctcce))      
             
 Tutorial
 ==
